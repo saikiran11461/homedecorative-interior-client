@@ -40,7 +40,7 @@ const App = () => (
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/santhosh/interior/register" element={<RegisterPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/review/:token" element={<ReviewSubmit />} />
           <Route path="/admin/login" element={<AdminLogin />} />
