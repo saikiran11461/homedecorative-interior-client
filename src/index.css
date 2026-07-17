@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 97%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 42 45% 52%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 40 20% 93%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 72 32% 42%;
+    --accent-foreground: 40 30% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 42 45% 52%;
+    --radius: 0.75rem;
+
+    --gold: 42 45% 52%;
+    --gold-dark: 38 45% 38%;
+    --gold-light: 42 55% 92%;
+    --olive: 72 32% 42%;
+    --olive-dark: 72 32% 30%;
+    --olive-light: 72 30% 90%;
+    --charcoal: 0 0% 6%;
+    --cream: 40 30% 97%;
+
+    --coral: 42 45% 52%;
+    --coral-dark: 38 45% 38%;
+    --coral-light: 42 55% 92%;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 40 30% 92%;
+    --sidebar-primary: 42 45% 55%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 40 30% 92%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 42 45% 55%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-display; }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(42 45% 52%) 0%, hsl(38 45% 38%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, hsl(42 55% 60%) 0%, hsl(38 45% 42%) 100%);
+  }
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, hsl(42 45% 52%) 0%, hsl(72 32% 42%) 100%);
+  }
+  .bg-coral-gradient {
+    background: linear-gradient(135deg, hsl(42 45% 55%) 0%, hsl(72 32% 42%) 100%);
+  }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: hsl(40 15% 92%); }
+::-webkit-scrollbar-thumb { background: hsl(42 30% 65%); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(42 45% 52%); }
+
+::selection { background: hsl(42 45% 52% / 0.3); color: hsl(0 0% 8%); }
