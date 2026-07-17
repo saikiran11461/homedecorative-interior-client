@@ -72,9 +72,9 @@ const AdminLogin = () => {
             <button type="submit" className="w-full py-3.5 bg-gold text-charcoal font-sans text-sm font-semibold rounded-xl hover:bg-gold-dark hover:text-cream transition-colors inline-flex items-center justify-center gap-2 shadow-lg shadow-gold/20">
               Sign In <ArrowRight size={16} />
             </button>
-            <p className="font-sans text-sm text-muted-foreground text-center pt-2">
+            {/* <p className="font-sans text-sm text-muted-foreground text-center pt-2">
               New admin? <Link to="/admin/register" className="text-gold hover:underline font-semibold">Create an account</Link>
-            </p>
+            </p> */}
           </form>
         </div>
       </div>
