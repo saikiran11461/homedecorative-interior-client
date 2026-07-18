@@ -34,7 +34,7 @@ const FloatingButtons = () => {
         )}
       </AnimatePresence>
       <motion.a
-        href="https://wa.me/8309324365"
+        href="https://wa.me/918309324365"
         target="_blank"
         rel="noopener noreferrer"
         animate={{ y: [0, -3, 0] }}
