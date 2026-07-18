@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import { motion } from "framer-motion";
+import { useSEO } from "@/hooks/useSEO";
 
 const PageHeader = ({ label, title, italic, subtitle, img }: { label: string; title: string; italic: string; subtitle: string; img: string }) => (
   <section className="relative pt-32 pb-16 px-6 bg-charcoal overflow-hidden">
@@ -39,7 +40,15 @@ const PageHeader = ({ label, title, italic, subtitle, img }: { label: string; ti
   </section>
 );
 
-const AboutPage = () => (
+const AboutPage = () => {
+  useSEO({
+    title: "About",
+    description:
+      "Meet Home Decorative Interior — an award-winning interior design studio crafting elegant, functional living spaces for homes and commercial projects.",
+    path: "/about",
+  });
+
+  return (
   <div className="bg-background">
     <Navbar />
     <PageHeader
@@ -56,5 +65,7 @@ const AboutPage = () => (
     <FloatingButtons />
   </div>
 );
+
+};
 
 export default AboutPage;

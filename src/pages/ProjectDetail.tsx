@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import { useProjectDetail, useReviews } from "@/hooks/use-site-data";
+import { useSEO } from "@/hooks/useSEO";
 
 function getYouTubeEmbedUrl(url: string): string | null {
   if (!url) return null;
@@ -25,6 +26,15 @@ const ProjectDetail = () => {
   const [galleryIdx, setGalleryIdx] = useState(0);
   const [comparePos, setComparePos] = useState(50);
   const [lightbox, setLightbox] = useState<number | null>(null);
+
+  useSEO({
+    title: project ? project.title : "Project",
+    description: project
+      ? `${project.title} — ${project.category} interior design in ${project.location} by Home Decorative Interior.`
+      : "Interior design project by Home Decorative Interior.",
+    path: id ? `/project/${id}` : undefined,
+    image: project?.img,
+  });
 
   if (isLoading) {
     return (

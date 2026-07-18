@@ -10,8 +10,17 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import { useSEO } from "@/hooks/useSEO";
 
-const Index = () => (
+const Index = () => {
+  useSEO({
+    title: "Home",
+    description:
+      "Home Decorative Interior — premium interior design studio crafting elegant living spaces for homes & commercial projects. Explore award-winning residential and commercial interiors.",
+    path: "/",
+  });
+
+  return (
   <div className="bg-background">
     <Navbar />
     <main>
@@ -29,5 +38,7 @@ const Index = () => (
     <FloatingButtons />
   </div>
 );
+
+};
 
 export default Index;

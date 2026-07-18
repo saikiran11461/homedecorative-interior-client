@@ -3,8 +3,17 @@ import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import ContactSection from "@/components/ContactSection";
 import { motion } from "framer-motion";
+import { useSEO } from "@/hooks/useSEO";
 
-const ContactPage = () => (
+const ContactPage = () => {
+  useSEO({
+    title: "Contact",
+    description:
+      "Get in touch with Home Decorative Interior for interior design consultations, residential and commercial projects, and collaborations.",
+    path: "/contact",
+  });
+
+  return (
   <div className="bg-background">
     <Navbar />
     <section className="relative pt-32 pb-16 px-6 bg-charcoal overflow-hidden">
@@ -28,5 +37,7 @@ const ContactPage = () => (
     <FloatingButtons />
   </div>
 );
+
+};
 
 export default ContactPage;

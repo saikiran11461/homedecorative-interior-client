@@ -1,0 +1,17 @@
+{
+  "name": "Home Decorative Interior",
+  "short_name": "HD Interior",
+  "description": "Premium interior design studio crafting elegant living spaces for homes & commercial projects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1c1c1c",
+  "icons": [
+    {
+      "src": "/home-decorative-logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

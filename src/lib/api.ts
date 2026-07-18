@@ -18,6 +18,8 @@ export function clearAuthToken() {
   window.localStorage.removeItem("home-interiors-admin-token");
 }
 
+console.log('API_BASE:', import.meta.env.VITE_API_URL);
+
 async function request<T>(path: string, options: RequestOptions = {}): Promise<T> {
   const headers = new Headers(options.headers);
 

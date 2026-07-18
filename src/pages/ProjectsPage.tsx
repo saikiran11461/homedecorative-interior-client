@@ -6,10 +6,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import { useProjectsContent } from "@/hooks/use-site-data";
+import { useSEO } from "@/hooks/useSEO";
 
 const PAGE_SIZE = 6;
 
 const ProjectsPage = () => {
+  useSEO({
+    title: "Projects",
+    description:
+      "Browse interior design projects by Home Decorative Interior — living rooms, bedrooms, kitchens, bathrooms, commercial and outdoor spaces across the world.",
+    path: "/projects",
+  });
+
   const [active, setActive] = useState("All");
   const [page, setPage] = useState(1);
   const { data } = useProjectsContent();

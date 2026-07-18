@@ -5,8 +5,17 @@ import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import { motion } from "framer-motion";
+import { useSEO } from "@/hooks/useSEO";
 
-const ServicesPage = () => (
+const ServicesPage = () => {
+  useSEO({
+    title: "Services",
+    description:
+      "Explore our interior design services — residential interiors, commercial design, space planning, styling and turnkey project execution by Home Decorative Interior.",
+    path: "/services",
+  });
+
+  return (
   <div className="bg-background">
     <Navbar />
     <section className="relative pt-32 pb-16 px-6 bg-charcoal overflow-hidden">
@@ -32,5 +41,7 @@ const ServicesPage = () => (
     <FloatingButtons />
   </div>
 );
+
+};
 
 export default ServicesPage;
