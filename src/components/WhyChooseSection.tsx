@@ -22,7 +22,9 @@ const WhyChooseSection = () => (
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
           className="w-full h-full object-cover"
-          alt="Interior design"
+          alt="Why choose Home Decorative Interior — premium interior design Hyderabad"
+          loading="lazy"
+          decoding="async"
         />
       </motion.div>
       <div>

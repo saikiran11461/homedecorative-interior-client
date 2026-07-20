@@ -60,14 +60,18 @@ const AboutSection = () => (
           <img
             src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1200"
             className="w-full h-full object-cover"
-            alt="Our design process"
+            alt="Our design process at Home Decorative Interior"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="absolute -bottom-6 -right-6 w-48 h-64 rounded-2xl overflow-hidden border-4 border-background shadow-xl hidden md:block">
           <img
             src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600"
             className="w-full h-full object-cover"
-            alt="Interior detail"
+            alt="Interior design detail by Home Decorative Interior"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </motion.div>

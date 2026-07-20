@@ -22,7 +22,7 @@ const Hero = () => {
 
   return (
     <section className="relative h-svh w-full overflow-hidden">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={current}
           initial={{ opacity: 0, scale: 1.05 }}
@@ -32,7 +32,14 @@ const Hero = () => {
           className="absolute inset-0"
         >
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/40 to-charcoal/85 z-10" />
-          <img src={heroImages[current]} className="w-full h-full object-cover animate-ken-burns" alt="Interior Design" />
+          {/* First image is LCP candidate - use eager loading and high fetchpriority */}
+          <img
+            src={heroImages[current]}
+            className="w-full h-full object-cover animate-ken-burns"
+            alt="Home Decorative Interior — Premium Interior Design Studio Hyderabad"
+            fetchPriority={current === 0 ? "high" : "auto"}
+            loading={current === 0 ? "eager" : "lazy"}
+          />
         </motion.div>
       </AnimatePresence>
 
@@ -44,7 +51,7 @@ const Hero = () => {
           className="mb-5"
         >
           <span className="inline-block px-5 py-2 rounded-full bg-gold/15 backdrop-blur-md border border-gold/40 text-gold text-xs font-sans font-medium tracking-widest uppercase">
-            ✦ Award-Winning Design Studio
+            ✦ Award-Winning Design Studio in Hyderabad
           </span>
         </motion.div>
 
@@ -65,7 +72,7 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="font-sans text-cream/75 text-base md:text-lg mb-10 max-w-xl leading-relaxed"
         >
-          Where architectural craft meets warm, artful living — homes and commercial spaces reimagined.
+          Hyderabad's premier interior design studio — where architectural craft meets warm, artful living. We specialize in residential and commercial interiors.
         </motion.p>
 
         <motion.div
@@ -89,13 +96,16 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      {/* Slide navigation dots */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2" role="tablist" aria-label="Hero slides">
         {heroImages.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
             className={`h-1 rounded-full transition-all duration-300 ${i === current ? "bg-gold w-10" : "bg-cream/30 w-4"}`}
             aria-label={`Slide ${i + 1}`}
+            role="tab"
+            aria-selected={i === current}
           />
         ))}
       </div>

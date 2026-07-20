@@ -1,17 +1,24 @@
 {
-  "name": "Home Decorative Interior",
+  "name": "Home Decorative Interior — Best Interior Designers in Hyderabad",
   "short_name": "HD Interior",
-  "description": "Premium interior design studio crafting elegant living spaces for homes & commercial projects.",
+  "description": "Premier interior design studio in Hyderabad offering luxury residential and commercial interior design services including modular kitchens, bedroom interiors, and home renovation.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#faf8f5",
   "theme_color": "#1c1c1c",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "scope": "/",
+  "categories": ["home", "design", "interior design", "lifestyle"],
   "icons": [
     {
       "src": "/home-decorative-logo.png",
       "sizes": "any",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
 }

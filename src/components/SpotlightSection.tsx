@@ -8,7 +8,9 @@ const SpotlightSection = () => (
       <img
         src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000"
         className="w-full h-full object-cover"
-        alt="Featured Project"
+        alt="Featured Project — The Milan Penthouse by Home Decorative Interior"
+        loading="lazy"
+        decoding="async"
       />
     </div>
     <div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">

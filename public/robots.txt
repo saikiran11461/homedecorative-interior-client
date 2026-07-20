@@ -1,16 +1,82 @@
+# robots.txt for Home Decorative Interior
+# https://www.homedecorativeinterior.com/
+
+# Allow all major search engines - full access
 User-agent: Googlebot
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /projects
+Allow: /contact
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /review/
+Disallow: /api/
+Disallow: /santhosh/interior/register
+
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /admin/
+
+User-agent: Googlebot-Video
 Allow: /
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /api/
 
 User-agent: Twitterbot
 Allow: /
+Disallow: /admin
 
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /admin
 
-User-agent: *
+User-agent: Slurp (Yahoo!)
+Allow: /
+Disallow: /admin
+
+User-agent: DuckDuckBot
 Allow: /
 
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+
+# Default rule for all other crawlers
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+
+# Crawl delay to reduce server load
+Crawl-delay: 10
+
+# Sitemap location
 Sitemap: https://www.homedecorativeinterior.com/sitemap.xml

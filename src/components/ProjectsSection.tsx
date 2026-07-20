@@ -59,8 +59,10 @@ const ProjectsSection = () => {
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
                     <img
                       src={project.img}
-                      alt={project.title}
+                      alt={`${project.title} — interior design project by Home Decorative Interior`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
